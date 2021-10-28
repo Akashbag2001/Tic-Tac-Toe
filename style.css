@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@500&family=Bebas+Neue&family=Roboto+Mono:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    list-style-type: none;
+}
+nav{
+    background-color: #d9ed92;
+    color: black;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto Mono', monospace;
+}
+.gameContainer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+
+}
+.container{
+    display: grid;
+    position: relative;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Roboto Mono', monospace;
+}   
+.box{
+    border:2px solid black ;
+    font-size:8vw ;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(194, 230, 231);
+}
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size:1rem ;
+}
+.imgBox img{
+    width: 0;
+    transition:width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+.info{
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 1.3rem; 
+}
+#reset{
+    margin: 0 25px;
+    padding: 5px 20px;
+    background-color: crimson;
+    border-radius:5px ;
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 1rem;
+    
+}
+#reset:hover{
+    box-shadow: inset 300px 0 0 0 #d9ed92 ;
+    cursor: pointer;
+    color: #c9184a;
+    transform: translateY(-10%);
+    
+}
+
+.line{
+    
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    background-color:black;
+    transition: width 1s ease-in-out;
+}
+@media only screen and (max-width: 950px) {
+    .gameContainer {
+     flex-wrap: wrap;
+    }
+    .gameInfo{
+        font-size:0.7rem ;
+        margin-top:30px ;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    
+}
+  
+  
